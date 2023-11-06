@@ -1,0 +1,13 @@
+{NETCAT} -> the network swiss army knife
+
+https://www.youtube.com/watch?v=bXCeFPNWjsM&t=7s
+
+
+
+key -> jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
+
+------------------------------------------
+# l -> listening mode
+# v -> verbose mode {To tell the netcat tell me everything} 
+# p -> To set the listening port
+# n -> no DNS we using 

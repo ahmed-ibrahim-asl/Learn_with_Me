@@ -1,0 +1,13 @@
+Idea of the room:
+	he was trying to confuse me with spaces in the file name 
+
+solution
+
+	to treat the spaces as part of the file 
+
+	cat spaces\ in\ this\ filename
+	cat "spaces in this filename"
+
+
+
+password -> aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG

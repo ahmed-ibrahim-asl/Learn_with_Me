@@ -1,0 +1,5 @@
+the point was to convert any characters that can be converted into strings inside data.txt file into strings
+
+solution => strings data.txt
+
+password => G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s

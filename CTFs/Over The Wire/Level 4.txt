@@ -1,0 +1,10 @@
+Idea is to teach me how to view hidden text files 
+
+
+solution:	
+	cd inhere/;ls -la
+	cat .hidden
+
+
+
+2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe

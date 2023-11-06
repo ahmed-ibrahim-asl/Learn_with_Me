@@ -1,0 +1,7 @@
+this was an extra practice for find command flags 
+
+
+	solution => find  / -user bandit7 -group bandit6 -size 33c 2>/dev/null
+
+
+	password => z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S

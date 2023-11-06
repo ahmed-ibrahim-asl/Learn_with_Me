@@ -1,0 +1,31 @@
+'pyw': extention for th script to allow it run without pop up concolse
+
+
+(pyHook) is designed to work directly with the Windows Hook API,
+[Windows hook api], is feature event which monitor and intercept
+input events, such as keystrokes and mouse movements in windows. 
+(why this exist?) [for developers to implement shortcuts in there programs]
+In summary: this module can be used for windows os only
+
+
+
+(pynput)
+cross-platform, has similar features like pyHook but has more features
+like simulating mouse and keyboard events also it can listen to 
+more addvance things like touchpads 
+
+
+- we going to use threading to sperate task of listening from of 
+(logging data, writing to file, sending it) 
+
+
+
+
+
+[
+    If you are sending data to a server, it may be more appropriate to do so asynchronously (i.e., in the background) rather than synchronously (i.e., in the same thread as the event listener). One way to do this is to use a Python library like asyncio to run your networking code in a separate thread or process.
+]
+
+[
+    creations 
+]

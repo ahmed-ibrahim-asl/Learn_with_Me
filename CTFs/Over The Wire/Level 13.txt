@@ -1,0 +1,15 @@
+[Pain in the ass]
+
+To get representation of a file or data in hexadecimal format 
+	-> xxd fileName > outputFile
+
+brings hexdump file format into the binary format 
+	-> xxd -r fileName > l
+
+
+compressing files and archiving files:
+	tar tool can be used to apply comressing or 
+
+
+
+wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw

@@ -1,0 +1,6 @@
+Practice for grep command 
+	solution -> cat data.txt | grep millionth
+
+
+	password -> TESKZC0XvTetK0S9xNwm25STk5iWrBvP
+		    

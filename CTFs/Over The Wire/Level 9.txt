@@ -1,0 +1,7 @@
+uniq -c only detect the consecutive duplicate lines that why I had to sort the data.txt first
+
+
+	solution => sort data.txt | uniq -c
+
+
+	password => EN632PlfYiZbn3PhVK3XOGSlNInNE00t

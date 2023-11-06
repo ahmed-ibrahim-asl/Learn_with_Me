@@ -1,0 +1,11 @@
+why it's not staright forward to open dashed file ?
+	so if i typed "cat file1 - file2" this would leads to displaying 	
+	the file1 then file2. BUT if I typed "cat - file2" the stdin will be displayed 
+	then file2 so '-' is just delimiter
+	between files not refers to stdin right.
+
+
+	solution -> cat ~/-
+
+
+rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi

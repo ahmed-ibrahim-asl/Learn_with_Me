@@ -1,0 +1,19 @@
+
+	
+key -> JQttfApK4SeyHwDlI9SXGR50qclOAil1
+-------
+
+
+[to set up a basic SSL/TLS communication channel between a single server and a single client.]
+[server]
+	[Generate a private key]
+	openssl genpkey -algorithm RSA -out server.key -aes256
+
+	[establish the server]	
+	openssl s_server -accept 60100 -key keyfile.key 
+
+[client]
+openssl s_client -connect host:port
+
+-------------------------------------------
+The private key is used to decrypt data sent from the client to the server. 

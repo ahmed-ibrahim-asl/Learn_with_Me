@@ -1,0 +1,10 @@
+find . -size 1033c
+
+c -> refers to or denote bytes 
+
+
+
+solution -> 'find . *size 1033c'
+
+
+P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU

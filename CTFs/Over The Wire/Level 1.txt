@@ -1,0 +1,6 @@
+password was stored in the home directory of the current user so I just opened that ascii file 
+
+
+solution: cat readme
+
+password -> NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL

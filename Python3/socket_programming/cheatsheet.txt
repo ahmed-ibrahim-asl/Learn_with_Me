@@ -1,0 +1,58 @@
+import socket
+
+#######     creating socket object     #######################
+
+# socket.AF_INET -> refers to we using IPV4
+# socket.SOCK_STREAM -> refers to we using TCP protocol
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+##############################################################
+
+##### Binding a socket to a specific IP address and port #####
+
+# explaination: when we create a socket object, we have 
+# to associate that socket object with an ip and port
+# using bind method 
+
+# bind() method:
+# takes two arguments (IP<string>, Port<int>)
+
+
+# you can use commented line to automatically grap the ip 
+ip = "192.168.1.1" #socket.gethostbyname(socket.gethostname())
+
+port = 80
+s.bind((ip, port))
+##############################################################
+
+####### either you setuping a server or client ###############
+
+####### Setting up a server to listen for incoming connections
+
+#  listen: method takes one argument method specifies the maximum
+#  number of connections that the server  can handle.
+s.listen(1)
+
+# addr -> returns tuple of (ip of client, port client <uses for that connection that would receive connection on that>)
+# clietn_socket -> A new socket object representing the connection with the client
+client_socket, addr = s.accept()
+
+
+
+####### setuping up a client ###############
+
+# connecting a client to a server
+server_ip_address = "192.168.1.1"
+server_port = 80
+s.connect((server_ip_address, server_port))
+
+# to send data 
+s.send(data)
+
+
+# to receive data
+s.recv(buffer_size)
+
+###########################################
+#closing the connection
+s.close()
+

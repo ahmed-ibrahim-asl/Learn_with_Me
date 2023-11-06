@@ -1,0 +1,7 @@
+The idea to teach me how to use ssh keys 
+	solution => ssh bandit14@localhost -i sshkey.private -p 2220
+	
+{Notes for me: try make good notes about ssh and ssh tunneling }
+
+
+key => fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq

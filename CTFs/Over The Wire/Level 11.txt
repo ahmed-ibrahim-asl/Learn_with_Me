@@ -1,0 +1,7 @@
+password for next level decoded in base64 and stored in data.txt file 
+
+
+solution => base64 -d data.txt
+
+
+6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
