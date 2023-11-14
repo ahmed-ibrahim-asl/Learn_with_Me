@@ -1,0 +1,49 @@
+def find_logo_on_screen(logo_path, screenshot_path):
+    # Read the logo and the screenshot
+    logo = cv2.imread(logo_path, cv2.IMREAD_UNCHANGED)
+    screenshot = cv2.imread(screenshot_path)
+
+    # Match the logo in the screenshot
+    result = cv2.matchTemplate(screenshot, logo, cv2.TM_CCOEFF_NORMED)
+
+    # Get the location of the logo in the screenshot
+    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
+    logo_height, logo_width = logo.shape[:2]
+
+    # Define the top left of the found logo
+    top_left = max_loc
+    bottom_right = (top_left[0] + logo_width, top_left[1] + logo_height)
+
+    return top_left, bottom_right
+
+
+
+
+cv2.imread()
+    This reads an image and output matrix or array contain a pixel values that define the image. each pixel can be represented 
+    by values that define its color (and transperency, if available). 
+
+
+IMREAD_UNCHANGED 
+    flag used in 'cv2.imread' ot ensure alpha channel it contained 
+    alpha channel - is an additional channel that represents transparency information of each pixel
+
+
+Note: 
+    > Alpha channel is not specifically captured with screenshots
+
+### Template Matching ###
+cv2.matchTemplate(screenshot, logo, cv2.TM_CCOEFF_NORMED)
+
+
+cv2.matchTemplate()
+    it slides the logo on top of screenshot and start compare both of them based on specified method which is third parameter
+
+    ### Template matching Methods ### 
+    1> cv2.TM_CCOEFF_NORMED      (Stands for: Normalized Cross-Correlation Coefficient)
+        1.1> compares the logo with every possible position in the screenshot and calculate similarity score
+             range between -1 and 1, (1 (Means perfect match)) | (-1 (Means worst match))
+########################################################################################
+
+### Locating the center of location ###
+check pdf 
