@@ -47,7 +47,7 @@ uint8 SDB_GetUsedSize(){
 }
 
 bool SDB_AddEntry(){
-    short newEntery_index = SDB_GetUsedSize()+1;
+    short newEntery_index = SDB_GetUsedSize();
     short status = 0;
 
     if(newEntery_index == Max_No_students){
@@ -95,17 +95,20 @@ bool SDB_ReadEntry(uint32 id){
 
 
     short iterator = 0;
-    char flag= 0x00;
+    bool flag = false;
 
-    while(students[iterator++].Student_ID != id){
+    while(students[iterator].Student_ID != id){
 
         if(students[iterator].Student_ID == id){
-            flag = 0x01;
+            flag = true;
+            break;
         }
+
+        ++iterator;
     }
 
 
-    if(flag = 0x00){
+    if(flag == false){
         return false;
     }
 
@@ -127,21 +130,19 @@ bool SDB_IsIdExist(uint32 id){
 
 
     short iterator = 0;
-    char flag= 0x00;
+    bool flag= false;
 
-    while(students[iterator++].Student_ID != id){
+    while(students[iterator].Student_ID != id){
 
         if(students[iterator].Student_ID == id){
-            flag = 0x01;
+            return true;
         }
+
+        ++iterator;
     }
 
 
-    if(flag == 0x00){
-        return false;
-    }
-
-    return true;
+    return false;
 
 }
 
@@ -156,6 +157,12 @@ void SDB_GetList(uint8 *count, uint32 *list){
 
         list[*count] = students[*count].Student_ID;
         ++*count;
+    }
+
+
+    for(int iterator = 0; iterator < *count; ++iterator){
+        list[iterator] = students[iterator].Student_ID;
+    
     }
 
 }
@@ -267,7 +274,7 @@ void SDB_APP(){
     printf("\n5. To check is ID is existed, enter 5");
     printf("\n6. To delete student data, enter 6");
     printf("\n7. To check is database is full, enter 7");
-    printf("\n8. To exit enter 0");
+    printf("\n8. To exit enter 8");
 
 
     printf("\n=> ");
