@@ -151,15 +151,6 @@ void SDB_GetList(uint8 *count, uint32 *list){
 
 
 
-    *count = 0;
-
-    while(students[*count].Student_ID != 0 ){
-
-        list[*count] = students[*count].Student_ID;
-        ++*count;
-    }
-
-
     for(int iterator = 0; iterator < *count; ++iterator){
         list[iterator] = students[iterator].Student_ID;
     
