@@ -26,10 +26,8 @@ int powerOfTwo_or_powerOfThree(int Number){
 
     if (Number <= 0) return -1; // Handle non-positive numbers
 
-    // Check for power of 2
-    if ((Number & (Number - 1)) == 0) {
+    if( (Number&(Number-1)) == 0)
         return 1;
-    }
 
     // Check for power of 3
     while (Number % 3 == 0) {
